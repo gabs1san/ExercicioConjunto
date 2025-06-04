@@ -25,6 +25,7 @@ namespace ExercicioConjunto
                         DateTime instant = DateTime.Parse(line[1]);
                         set.Add(new LogRecord { Username = name, Instant = instant });
                     }
+
                     Console.WriteLine("Total users: " + set.Count);
                 }
             }
