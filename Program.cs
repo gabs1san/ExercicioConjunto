@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExercicioConjunto.Entities;
+using System;
 using System.IO;
 
 namespace ExercicioConjunto
@@ -7,6 +8,10 @@ namespace ExercicioConjunto
     {
         static void Main(string[] args)
         {
+
+            HashSet<LogRecord> set = new HashSet<LogRecord>();
+
+
             Console.Write("Enter file full path: ");
             string path = Console.ReadLine();
             try
@@ -15,9 +20,12 @@ namespace ExercicioConjunto
                 {
                     while (!sr.EndOfStream)
                     {
-                        string line = sr.ReadLine();
-                        Console.WriteLine(line);
+                        string[] line = sr.ReadLine().Split(' ');
+                        string name = line[0];
+                        DateTime instant = DateTime.Parse(line[1]);
+                        set.Add(new LogRecord { Username = name, Instant = instant });
                     }
+                    Console.WriteLine("Total users: " + set.Count);
                 }
             }
             catch (IOException e)
