@@ -11,7 +11,7 @@ namespace ExercicioConjunto.Entities
             return Username.GetHashCode();
         }
 
-        public override bool Equals(object? obj)
+        public override bool Equals(object obj)
         {
             if (! (obj is LogRecord))
             {
