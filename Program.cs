@@ -36,7 +36,7 @@ namespace ExercicioConjuto
             }
             catch (IOException e)
             {
-                Console.WriteLine("Erro ao ler o arquivo: " + e.Message);
+                Console.WriteLine("\r\nError trying to read file: " + e.Message);
             }
         }
     }
