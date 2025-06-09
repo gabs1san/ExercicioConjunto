@@ -18,7 +18,7 @@ namespace ExercicioConjunto.Entities
                 return false;
             }
 
-            LogRecord other = obj as LogRecord;
+            LogRecord? other = obj as LogRecord;
             return Username.Equals(other.Username);
         }
     }
