@@ -1,7 +1,7 @@
 ﻿
 namespace ExercicioConjunto.Entities
 {
-    internal class LogRecord
+    class LogRecord
     {
         public string Username { get; set; }
         public DateTime Instant { get; set; }
